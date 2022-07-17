@@ -1,3 +1,33 @@
 .grid {
     margin: 100px 0 0;
+    /* width: 1000px; */
+    
+}
+#grid-items{
+  /* width: 900px; */
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    left: 2%;
+    right: 2%;
+    /* top: 50%; */
+}
+.node{
+  width: 2%;
+}
+@media screen and (max-width: 600px) {
+  /* #grid-items{
+    width: 100%;
   }
+  .node{
+    width: 6px;
+  } */
+  /* .grid{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 35%;
+    top: 50%;
+  } */
+  /* body{
+    width: 100%;
+  } */
+}

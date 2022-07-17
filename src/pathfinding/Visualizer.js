@@ -127,30 +127,34 @@ function Visualizer(props) {
       <button onClick={visualizebfs}>BFS</button>
       <button onClick={visualizeastar}>ASTAR</button>
       <button onClick={reset}>RESET</button>
-      {grid.map((row, rowIdx) => {
-        return (
-          <div key={rowIdx}>
-            {row.map((node, nodeIdx) => {
-              const {row, col, isFinish, isStart, isWall} = node;
-              return (
-                <Node
-                  key={nodeIdx}
-                  row={row}
-                  col={col}
-                  isStart={isStart}
-                  isFinish={isFinish}
-                  isWall={isWall}
-                  mouseIsPressed={mouseIsPressed}
-                  onMouseDown={(row, col) => handleMouseDown(row, col)}
-                  onMouseEnter={(row, col) =>handleMouseEnter(row, col)}
-                  onMouseUp={() => handleMouseUp()}
-                >
-                </Node>
-              );
-            })}
-          </div>
-        );
-      })}
+      <div>For better Experience, use Desktop Mode</div>
+      <div>Click and drag on the boxes to create the walls</div>
+      <div id="grid-items">
+        {grid.map((row, rowIdx) => {
+          return (
+            <div key={rowIdx}>
+              {row.map((node, nodeIdx) => {
+                const {row, col, isFinish, isStart, isWall} = node;
+                return (
+                  <Node
+                    key={nodeIdx}
+                    row={row}
+                    col={col}
+                    isStart={isStart}
+                    isFinish={isFinish}
+                    isWall={isWall}
+                    mouseIsPressed={mouseIsPressed}
+                    onMouseDown={(row, col) => handleMouseDown(row, col)}
+                    onMouseEnter={(row, col) =>handleMouseEnter(row, col)}
+                    onMouseUp={() => handleMouseUp()}
+                  >
+                  </Node>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
     </div>
   )
 }
